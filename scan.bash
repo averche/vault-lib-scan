@@ -13,5 +13,5 @@ while read line; do
 
   last_commit_date=$(echo "${commit}" | jq .commit.author.date)
 
-  echo "${lib_name} ${last_commit_date}"
+  echo "${lib_name},${last_commit_date}"
 done < "libs.list"
